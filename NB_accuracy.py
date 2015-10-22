@@ -1,7 +1,7 @@
 from numpy import *
 
-label_pred = loadtxt('test.label_predict')
-label = loadtxt('test.label')
+label_pred = loadtxt('data/test.label_predict')
+label = loadtxt('data/test.label')
 
 label_num = size(label)
 accu = 0

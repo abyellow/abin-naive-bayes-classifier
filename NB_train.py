@@ -1,8 +1,8 @@
 from numpy import *
 
-data = loadtxt('train.data')
-label = loadtxt('train.label')
-#map = loadtxt('train.map')
+data = loadtxt('data/train.data')
+label = loadtxt('data/train.label')
+#map = loadtxt('data/train.map')
 
 data_num = size(data[:,0])
 doc_num = size(label)
@@ -26,7 +26,7 @@ for i in range(doc_num):
 			label_count[j-1] += 1
 			break
 prob_class = label_count/double(sum(label_count))
-savetxt('train.prob_class',prob_class)
+savetxt('data/train.prob_class',prob_class)
 
 #accumulate the number 
 for n in range(cls_num-1):
@@ -54,8 +54,8 @@ for r in range(cls_num):
 
 	
 #save probability
-savetxt('train.prob',prob)
-savetxt('train.mean',[mean])
+savetxt('data/train.prob',prob)
+savetxt('data/train.mean',[mean])
 
 
 

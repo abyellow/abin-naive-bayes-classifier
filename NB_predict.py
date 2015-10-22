@@ -2,11 +2,11 @@ from numpy import *
 #print label[0:1000]
 #print label[0:1000]
 renormal = .8*10**3
-prob = double(loadtxt('train.prob'))*renormal
-prob_cls = loadtxt('train.prob_class')
-mean = int(loadtxt('train.mean'))
-testdata = loadtxt('test.data')
-testlabel = loadtxt('test.label')
+prob = double(loadtxt('data/train.prob'))*renormal
+prob_cls = loadtxt('data/train.prob_class')
+mean = int(loadtxt('data/train.mean'))
+testdata = loadtxt('data/test.data')
+testlabel = loadtxt('data/test.label')
 #testmap = loadtxt('test.map')
 
 data_num = size(testdata[:,0])
@@ -42,4 +42,4 @@ for l in range(doc_num):
 
 #print label_pred[0:500]
 
-savetxt('test.label_predict', label_pred)
+savetxt('data/test.label_predict', label_pred)
