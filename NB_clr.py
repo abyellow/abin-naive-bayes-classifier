@@ -1,11 +1,15 @@
+#Naive Bayes Classifier Project
+#Editor: Bin H.
+
 from numpy import *
 
+class NBClr:
 
-
-class NB_clr:
-
+	"""
+	Naive Bayes Classifier Class
+	"""
 	def __init__(self,data,label,cls_num = 20, delta = .1):
-		
+
 		self.data = data
 		self.label = label
 		self.data_num = size(data[:,0])
@@ -131,7 +135,7 @@ if __name__ == '__main__':
 	test_data = loadtxt('data/test.data')
 	test_label = loadtxt('data/test.label')
 
-	nb = NB_clr(train_data,train_label)
+	nb = NBClr(train_data,train_label)
 	prob_cls, prob, mean = nb.clc_prob()
 	label_pred = nb.pred(test_data, test_label, prob_cls, prob, mean)
 	accu = nb.accu(label_pred, test_label)
